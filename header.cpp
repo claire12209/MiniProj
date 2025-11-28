@@ -2231,6 +2231,10 @@ void parsing(string x) {
             globalstack.push(s[j]);
             ++j;
         }
+        else if (s[j] == "***"){
+            staticvar = !staticvar;
+            ++j;
+        }
         
         else {
             for (char& c : s[j]) { // reduce error by casting string to lowercase
